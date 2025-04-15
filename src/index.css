@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+.color-empty {
+    fill: #CCD0CF;
+  }
+  
+  .color-scale-1 {
+    fill: #4A5C6A;
+  }
+  
+  .color-scale-2 {
+    fill: #253745;
+  }
+  
+  .color-scale-3 {
+    fill: #11212D;
+  }
+  
+  .color-scale-4 {
+    fill: #06141B;
+  }
+
+  .react-calendar-heatmap text {
+    transform: translateX(-5px);
+  } 
+
+  
+  
