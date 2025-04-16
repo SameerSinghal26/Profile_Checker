@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext,useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
   LineChart,
@@ -13,10 +13,11 @@ import upIcon from "/assets/up_icon.png";
 import downIcon from "/assets/down_icon.png";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "react-calendar-heatmap/dist/styles.css";
-import { useUsername } from '../../Username.jsx';
+import { UsernameContext } from '../../Username.jsx';
 
 function Codechef() {
-  const { username, setUsername } = useUsername();
+  const { username } = useParams();
+  const { setUsername } = useContext(UsernameContext);
   const navigate = useNavigate();
 
   const [profile, setProfile] = useState(null);

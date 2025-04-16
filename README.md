@@ -1,12 +1,42 @@
-# React + Vite
+# Profile Checker Dashboard 🧑‍💻📊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, unified dashboard where you can view detailed statistics of a developer across multiple competitive programming and development platforms — **LeetCode**, **GitHub**, **Codeforces**, and **CodeChef**.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔎 **Username Input**: Enter any username once to access profile stats from all four platforms.
+- 📊 **Platform-specific Views**:
+  - **LeetCode**: Total problems solved, Difficulty breakdown (Easy, Medium, Hard), Contest ratings, Badges, Streaks, and Submission heatmap.
+  - **GitHub**: Profile details, Organizations, Repositories, Contributions, and Activity insights.
+  - **Codeforces**: Profile details, Ratings, Ranks, and Contest ratings Submission heatmap.
+  - **CodeChef**: Profile details, Star rating, Country ranking, Contests ratings, and Submission heatmap.
 
-## Expanding the ESLint configuration
+- 🔄 **Smart Routing**: Seamlessly navigates between platform pages with a single username input.
+- 🎯 **Context-Aware Navigation**: Platform data is fetched only when needed — reducing unnecessary API calls.
+- 🌗 **Responsive & Dark Mode Ready**: Fully optimized for both desktop and mobile views with theme toggles.
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+### [To View](https://profile-checker-sam.vercel.app/)
+
+## Getting Started
+
+To explore these projects locally, follow these steps:
+
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/Profile_Checker.git
+    ```
+2. **Navigate to the project directory**:
+    ```bash
+    cd mini-projects
+    ```
+3. **Open the project folder**:
+   Open the respective project folder and launch `index.html` in your preferred browser to view the application.
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](#) if you want to contribute.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.

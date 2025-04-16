@@ -1,16 +1,23 @@
-import { useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { useUsername } from '../../Username.jsx';
+import { UsernameContext } from '../../Username.jsx';
+import Toast from "../../Toast.jsx";
 
 function Github() {
   
-  const { username, setUsername } = useUsername();
+  const { username } = useParams();
+  const { setUsername } = useContext(UsernameContext);
   const [data, setData] = useState(null);
   const [organizations, setOrganizations] = useState([]);
   const [repositories, setRepositories] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [toast, setToast] = useState(null);
 
+  const showToast = (msg) => {
+    setToast({ msg });
+    setTimeout(() => setToast(null), 4000);
+  };
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -25,7 +32,7 @@ function Github() {
         );
         const userData = await userResponse.json();
         if (userData.message === "Not Found") {
-          alert("User not found!");
+          showToast("User not found!");
           setLoading(false);
           return;
         }
@@ -66,6 +73,7 @@ function Github() {
   const formattedDate = createdAt.toLocaleDateString("en-US", options);
 
   return (
+    <>{toast && <Toast message={toast.msg} />}
     <div className="text-center bg-gray-900">
       <div class="flex items-center gap-5 justify-center py-5">
         <img
@@ -205,6 +213,7 @@ function Github() {
         Go to Home
       </button>
     </div>
+    </>
   );
 }
 

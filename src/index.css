@@ -27,4 +27,30 @@
   } 
 
   
-  
+    #calenderblackbox{
+      height: 370px;
+    }
+    @media  (min-width : 420px){
+      #calenderblackbox{
+        height: 320px;
+      }
+    }
+    @media (min-width: 1024px) {
+      #calenderblackbox {
+        height: 430px;
+      }
+    }
+
+    #calenderblackbox2{
+      height: 340px;
+    }
+    @media  (min-width : 420px){
+      #calenderblackbox2{
+        height: 340px;
+      }
+    }
+    @media (min-width: 1024px) {
+      #calenderblackbox2 {
+        height: 430px;
+      }
+    }

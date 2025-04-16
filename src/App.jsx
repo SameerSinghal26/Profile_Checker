@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Toast from "./Toast.jsx";
 import "./App.css";
-import { useUsername } from './Username.jsx';
+import { UsernameContext } from './Username.jsx';
 
 
 function App() {
-  const { username, setUsername } = useUsername();
+  const { username, setUsername } = useContext(UsernameContext);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [toast, setToast] = useState(null);
